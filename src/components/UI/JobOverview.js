@@ -29,7 +29,11 @@ function JobOverview({
 	return (
 		<Grid container spacing={5}>
 			<Grid item md={2} className={classes.imageGrid}>
-				<img src={companyLogo} alt={company} className={classes.image} />
+				<img
+					src={companyLogo}
+					alt={company}
+					className={classes.image}
+				/>
 			</Grid>
 			<Grid item md={6}>
 				<div
@@ -44,7 +48,7 @@ function JobOverview({
 						style={{fontSize: '0.8rem'}}>
 						{company} &nbsp;&nbsp;
 					</Typography>
-					<Chip
+					{postTime <= '30min' ? <Chip
 						label='NEW!'
 						color='primary'
 						size='small'
@@ -54,7 +58,8 @@ function JobOverview({
 							color: 'white',
 							lineHeight: '2'
 						}}
-					/>
+					/> : ''}
+
 					{isFeatured && (
 						<>
 							&nbsp;
@@ -72,9 +77,7 @@ function JobOverview({
 						</>
 					)}
 				</div>
-				<Typography variant='subtitle1'>
-					{role}
-				</Typography>
+				<Typography variant='subtitle1'>{role}</Typography>
 				<Typography
 					variant='body1'
 					style={{

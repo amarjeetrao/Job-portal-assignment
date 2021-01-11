@@ -17,18 +17,21 @@ const useStyles = makeStyles({
 	}
 });
 
-function Tag({ children, handleDelete, handleClick }) {
+function Tag({ children, handleDelete, handleClick, style, ...custom }) {
 
 	const classes = useStyles();
 
 	return (
 		<Chip
+			style={style}
 			className={classes.root}
 			label={children}
 			color='secondary'
 			onClick={handleClick && handleClick}
 			onDelete={handleDelete && handleDelete}
-			deleteIcon={<ClearIcon className={classes.deleteIcon} />}
+			deleteIcon={<ClearIcon className={classes.deleteIcon}
+			{...custom}
+			/>}
 		/>
 	);
 }
