@@ -61,8 +61,29 @@ export default createMuiTheme({
 		},
 		MuiCard: {
 			root: {
-				overflow:'visible',
+				backgroundColor: 'white',
+				overflow: 'visible',
 				boxShadow: '9px 15px 18px 0px rgb(99 186 186 / 25%)'
+			}
+		},
+		MuiPaper: {
+			root: {
+				backgroundColor: '#EEF6F6'
+			}
+		},
+		MuiButton: {
+			containedPrimary: {
+				color: 'white',
+				fontWeight: '500',
+				boxShadow: 'none',
+				'&:hover': {
+					backgroundColor: '#7bb6b6',
+					boxShadow: '9px 15px 18px 0px rgb(99 186 186 / 25%)'
+				}
+			},
+			root: {
+				padding: '16px',
+				lineHeight: '1.4'
 			}
 		}
 	}
