@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 
-import { Box, Grid, Typography, MenuItem, Button } from '@material-ui/core';
+import {Box, Grid, Typography, MenuItem, Button} from '@material-ui/core';
 
-import ReduxFormAutocomplete from './formElements/ReduxFormAutocomplete'
-import ReduxFormCheckbox from './formElements/ReduxFormCheckbox'
-import ReduxFormSelect from './formElements/ReduxFormSelect'
-import ReduxFormInput from './formElements/ReduxFormInput'
+import ReduxFormAutocomplete from './formElements/ReduxFormAutocomplete';
+import ReduxFormCheckbox from './formElements/ReduxFormCheckbox';
+import ReduxFormSelect from './formElements/ReduxFormSelect';
+import ReduxFormInput from './formElements/ReduxFormInput';
 
 import FroalaEditor from './editor/FroalaEditor';
-import { Form, Field, reduxForm } from 'redux-form';
-
+import {Form, Field, reduxForm} from 'redux-form';
 
 const validate = values => {
 	const errors = {};
@@ -20,7 +19,9 @@ const validate = values => {
 		'level',
 		'role',
 		'contract',
-		'description'
+		'description',
+		'languages',
+		'tools'
 	];
 	requiredFields.forEach(field => {
 		if (!values[field]) {
@@ -52,15 +53,11 @@ const editorConfig = {
 	]
 };
 
-const onSubmit = (values) => {
-	alert(values);
+const onSubmit = (value) => {
+	console.log(value);
 }
 
 export class CreateForm extends Component {
-
-	handleChange = () => {
-
-	}
 
 	render() {
 		return (
@@ -221,7 +218,11 @@ export class CreateForm extends Component {
 									name='tools'
 									placeholderText='tools'
 									options={[
-										'React', 'Sass', 'Vue', 'Django', 'RoR (Ruby on Rails)'
+										'React',
+										'Sass',
+										'Vue',
+										'Django',
+										'RoR (Ruby on Rails)'
 									]}
 									component={ReduxFormAutocomplete}
 								/>
@@ -250,7 +251,7 @@ export class CreateForm extends Component {
 CreateForm = reduxForm({
 	form: 'createJob',
 	validate,
-	onSubmit,
+	onSubmit
 })(CreateForm);
 
-export default CreateForm
+export default CreateForm;

@@ -6,6 +6,12 @@ import Header from '../components/UI/Header';
 import CreateForm from '../components/UI/CreateForm';
 
 class Creation extends Component {
+
+	submit = values => {
+		// print the form values to the console
+		alert(values);
+	};
+
 	render() {
 		return (
 			<Container maxWidth='md'>
