@@ -1,5 +1,5 @@
-import React from 'react'
-import RadioButtonGroup from '@material-ui/core/RadioButtonGroup'
+import React from 'react';
+import RadioButtonGroup from '@material-ui/core/RadioButtonGroup';
 
 function ReduxFormRadio({input, ...rest}) {
 	return (
@@ -12,4 +12,4 @@ function ReduxFormRadio({input, ...rest}) {
 	);
 }
 
-export default ReduxFormRadio
+export default ReduxFormRadio;

@@ -1,15 +1,16 @@
-import React from 'react'
-import { Grid, Card, CardContent, CardActionArea } from '@material-ui/core'
+import React from 'react';
+import {Grid, Card, CardContent, CardActionArea} from '@material-ui/core';
 
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
-import JobOverview from './JobOverview'
-import TagList from './TagList'
+import JobOverview from './JobOverview';
+import TagList from './TagList';
 
-function JobItem({ jobDetails }) {
-
+function JobItem({jobDetails}) {
 	return (
-		<Link to={'/details/' + jobDetails.company} style={{textDecoration:'none'}}>
+		<Link
+			to={'/details/' + jobDetails.company}
+			style={{textDecoration: 'none'}}>
 			<Card raised style={{marginBottom: '60px'}}>
 				<CardActionArea>
 					<CardContent
@@ -44,4 +45,4 @@ function JobItem({ jobDetails }) {
 	);
 }
 
-export default JobItem
+export default JobItem;

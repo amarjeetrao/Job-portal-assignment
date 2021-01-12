@@ -1,13 +1,13 @@
-import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
+import React from 'react';
+import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
 	root: {
 		width: '100%',
 		position: 'absolute',
-    	zIndex: '-1',
-		top: '0',
-	},
+		zIndex: '-1',
+		top: '0'
+	}
 });
 
 function HeaderImg({image, style}) {
@@ -23,4 +23,4 @@ function HeaderImg({image, style}) {
 	);
 }
 
-export default HeaderImg
+export default HeaderImg;

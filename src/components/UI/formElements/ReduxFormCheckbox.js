@@ -1,5 +1,10 @@
-import React from 'react'
-import {FormControl,FormGroup, FormControlLabel, Checkbox} from '@material-ui/core';
+import React from 'react';
+import {
+	FormControl,
+	FormGroup,
+	FormControlLabel,
+	Checkbox
+} from '@material-ui/core';
 
 function ReduxFormCheckbox({input, label}) {
 	return (
@@ -20,4 +25,4 @@ function ReduxFormCheckbox({input, label}) {
 	);
 }
 
-export default ReduxFormCheckbox
+export default ReduxFormCheckbox;

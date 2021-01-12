@@ -5,15 +5,13 @@ import {
 	Box,
 	Grid,
 	Typography,
-	Button,
-	Paper
+	Button
 } from '@material-ui/core';
-import {Link} from 'react-router-dom'
 
 import Header from '../components/UI/Header';
 import HeaderImg from '../components/UI/HeaderImg';
-import TagList from '../components/UI/TagList'
-import AtGlance from '../components/UI/AtGlance'
+import TagList from '../components/UI/TagList';
+import AtGlance from '../components/UI/AtGlance';
 
 class Details extends Component {
 	state = {
@@ -153,7 +151,6 @@ class Details extends Component {
 				</Grid>
 			</Grid>
 		);
-
 	};
 
 	render() {

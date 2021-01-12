@@ -2,17 +2,16 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {Container, Box, Button} from '@material-ui/core';
 
-import { fetchJobList, jobListSelector } from '../store/reducers/JobListReducer';
+import {fetchJobList, jobListSelector} from '../store/reducers/JobListReducer';
 
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 import HeaderImg from '../components/UI/HeaderImg';
 import JobItem from '../components/UI/JobItem';
 
 function Listing() {
-
 	const dispatch = useDispatch();
-	const { jobList, loading, hasErrors } = useSelector(jobListSelector);
+	const {jobList, loading, hasErrors} = useSelector(jobListSelector);
 
 	useEffect(() => {
 		dispatch(fetchJobList());
@@ -53,7 +52,7 @@ function Listing() {
 			/>
 			<Container maxWidth='lg'>
 				<Box py={25}>
-					<Link to='/create' style={{textDecoration:'none'}}>
+					<Link to='/create' style={{textDecoration: 'none'}}>
 						<Button variant='contained' color='primary' fullWidth>
 							ADD NEW JOB
 						</Button>

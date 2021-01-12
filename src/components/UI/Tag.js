@@ -1,6 +1,6 @@
-import React from 'react'
-import Chip from '@material-ui/core/Chip'
-import ClearIcon from '@material-ui/icons/Clear'
+import React from 'react';
+import Chip from '@material-ui/core/Chip';
+import ClearIcon from '@material-ui/icons/Clear';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -13,12 +13,11 @@ const useStyles = makeStyles({
 		borderRadius: '0.5rem'
 	},
 	deleteIcon: {
-		width:'1rem'
+		width: '1rem'
 	}
 });
 
-function Tag({ children, handleDelete, handleClick, style, ...custom }) {
-
+function Tag({children, handleDelete, handleClick, style, ...custom}) {
 	const classes = useStyles();
 
 	return (
@@ -29,11 +28,11 @@ function Tag({ children, handleDelete, handleClick, style, ...custom }) {
 			color='secondary'
 			onClick={handleClick && handleClick}
 			onDelete={handleDelete && handleDelete}
-			deleteIcon={<ClearIcon className={classes.deleteIcon}
-			{...custom}
-			/>}
+			deleteIcon={
+				<ClearIcon className={classes.deleteIcon} {...custom} />
+			}
 		/>
 	);
 }
 
-export default Tag
+export default Tag;

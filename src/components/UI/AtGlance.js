@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import {Paper, Box, Typography} from '@material-ui/core';
 
@@ -22,4 +22,4 @@ function AtGlance({label, title}) {
 	);
 }
 
-export default AtGlance
+export default AtGlance;

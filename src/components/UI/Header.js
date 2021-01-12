@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import Typography from '@material-ui/core/Typography'
-import { Box, Grid } from '@material-ui/core'
+import Typography from '@material-ui/core/Typography';
+import {Box, Grid} from '@material-ui/core';
 
-import BackButton from './BackButton'
+import BackButton from './BackButton';
 
-function Header({ title }) {
-
+function Header({title}) {
 	return (
 		<Box py={8}>
 			<Grid container>
@@ -25,4 +24,4 @@ function Header({ title }) {
 	);
 }
 
-export default Header
+export default Header;

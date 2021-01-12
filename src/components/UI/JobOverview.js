@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Chip, makeStyles } from '@material-ui/core';
+import {Grid, Typography, Chip, makeStyles} from '@material-ui/core';
 
 const JobOverviewStyle = makeStyles(theme => ({
 	image: {
@@ -12,8 +12,7 @@ const JobOverviewStyle = makeStyles(theme => ({
 		[theme.breakpoints.down('sm')]: {
 			padding: '0 20px !important'
 		}
-	},
-
+	}
 }));
 
 function JobOverview({
@@ -48,17 +47,21 @@ function JobOverview({
 						style={{fontSize: '0.8rem'}}>
 						{company} &nbsp;&nbsp;
 					</Typography>
-					{postTime <= '30min' ? <Chip
-						label='NEW!'
-						color='primary'
-						size='small'
-						style={{
-							fontSize: '0.6rem',
-							fontWeight: 'bold',
-							color: 'white',
-							lineHeight: '2'
-						}}
-					/> : ''}
+					{postTime <= '30min' ? (
+						<Chip
+							label='NEW!'
+							color='primary'
+							size='small'
+							style={{
+								fontSize: '0.6rem',
+								fontWeight: 'bold',
+								color: 'white',
+								lineHeight: '2'
+							}}
+						/>
+					) : (
+						''
+					)}
 
 					{isFeatured && (
 						<>

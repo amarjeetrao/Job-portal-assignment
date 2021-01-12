@@ -30,10 +30,10 @@ export default jobListSlice.reducer;
 
 // The actions
 export const {
-			getjobList,
-			getjobListSuccess,
-			getjobListFailure
-		} = jobListSlice.actions;
+	getjobList,
+	getjobListSuccess,
+	getjobListFailure
+} = jobListSlice.actions;
 
 // The selector
 export const jobListSelector = state => state.jobList;

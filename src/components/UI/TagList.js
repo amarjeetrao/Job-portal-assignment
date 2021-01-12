@@ -1,21 +1,21 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles'
+import {makeStyles} from '@material-ui/core/styles';
 
 import Tag from './Tag';
 
 const TagListStyle = makeStyles(theme => ({
 	root: {
-		textAlign:'right',
+		textAlign: 'right',
 		[theme.breakpoints.down('sm')]: {
-			borderTop:' 1px solid #dadada',
+			borderTop: ' 1px solid #dadada',
 			paddingTop: '1.2rem',
 			marginTop: '1.2rem',
-			textAlign:'left'
+			textAlign: 'left'
 		}
 	}
 }));
 
-function TagList({ tagList, style }) {
+function TagList({tagList, style}) {
 	const classes = TagListStyle();
 
 	return (

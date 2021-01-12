@@ -1,5 +1,10 @@
-import React from 'react'
-import {FormControl, InputLabel, FormHelperText, Select} from '@material-ui/core';
+import React from 'react';
+import {
+	FormControl,
+	InputLabel,
+	FormHelperText,
+	Select
+} from '@material-ui/core';
 
 function ReduxFormSelect({
 	input,
@@ -19,9 +24,9 @@ function ReduxFormSelect({
 				children={children}
 				fullWidth
 			/>
-			<FormHelperText>{touched && error && 'This Field is Required'}</FormHelperText>
+			<FormHelperText>{touched && error}</FormHelperText>
 		</FormControl>
 	);
 }
 
-export default ReduxFormSelect
+export default ReduxFormSelect;

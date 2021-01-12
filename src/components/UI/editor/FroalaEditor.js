@@ -34,9 +34,8 @@ import 'froala-editor/js/plugins/font_family.min.js';
 
 // Render Froala Editor component.
 
-
 function FroalaEditor({config}) {
 	return <FroalaEditorComponent config={config} />;
 }
 
-export default FroalaEditor
+export default FroalaEditor;
